@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.urls import reverse
 
 
 class Postable(models.Model):
@@ -17,6 +18,9 @@ class Post(Postable):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('posts-detail', args=[str(self.id)])
 
 
 class Comment(Postable):

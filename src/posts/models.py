@@ -29,3 +29,6 @@ class Comment(Postable):
 
     def __str__(self):
         return self.message
+
+    def get_absolute_url(self):
+        return reverse('posts-detail', args=[str(self.post.id)])

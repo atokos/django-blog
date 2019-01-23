@@ -10,4 +10,21 @@
         <p>Modified: {{ post.modified }}</p>
         <a href="{% url 'posts-update' pk=post.pk%}">Edit</a>
     </div>
+    <div class="comments-container">
+    <div class="comment-field">
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Comment">
+        </form>
+    </div>
+    <div class="comments-list">
+        {% for comment in comments %}
+            <div class="comment-item">
+                <p>{{ comment.message }}</p>
+                <p><strong>{{ comment.commented_by }}</strong></p>
+                <a>{{ comment.created }}</a>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
 {% endblock %}

@@ -2,8 +2,9 @@
 
 {% block content %}
     <h1>List of all posts</h1>
+    <div class="post-container">
     {% for post in post_list %}
-        <div class="post-object">
+        <div class="post-item">
             <h2><a href="{% url 'posts-detail' pk=post.id %}">{{ post.title }}</a></h2>
             <p>By {{ post.posted_by }}</p>
             <p>{{ post.message }}</p>
@@ -11,4 +12,5 @@
             <p>Modified: {{ post.modified }}</p>
         </div>
     {% endfor %}
+    </div>
 {% endblock %}

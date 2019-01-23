@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Django Blog{% endblock title %}</title>
+</head>
+<body>
+<div class="navbar">
+    <a href="{% url 'posts-list' %}">Post list</a>
+    <a href="{% url 'posts-create' %}">New Post</a>
+</div>
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

@@ -8,7 +8,7 @@
         <p>{{ post.message }}</p>
         <p>Created: {{ post.created }}</p>
         <p>Modified: {{ post.modified }}</p>
-        <a href="{% url 'posts-update' pk=post.pk%}">Edit</a>
+        <a href="{% url 'posts:update' pk=post.pk%}">Edit</a>
     </div>
     <div class="comments-container">
     <div class="comment-field">

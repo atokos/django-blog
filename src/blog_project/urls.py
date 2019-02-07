@@ -21,6 +21,8 @@ from .views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('users.urls')),
     path('posts/', include('posts.urls')),
-    path('', HomePageView.as_view(), name='homepage'),
+    path('', HomePageView.as_view(), name='home'),
 ]

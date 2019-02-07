@@ -1,45 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Lato, sans-serif;
     text-decoration: none;
 }
-.navbar {
-    overflow: hidden;
-    background-color: #5c5c3d;
+.padding {
+    padding-bottom: 2em;
 }
-.navbar a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-.navbar a:hover {
-    background-color: #e0e0d1;
-    color: black;
-}
-.content div {
-    justify-content: center;
-}
-.content h1 {
-    text-align: center;
-    padding: 14px;
-
-}
-.post-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-.post-item {
-    padding: 5px 20px 20px 20px;
-    margin: 20px;
-    border: 1px black solid;
-}
-.post-details, .post-edit, .post-create {
-    display: grid;
-    margin: 20px;
-    padding: 20px;
-    border: 1px black solid;
+.btn {
+    min-width: 8em;
+    margin: auto 0.3em;
 }

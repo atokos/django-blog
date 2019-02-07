@@ -1,16 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>List of all posts</h1>
-    <div class="post-container">
-    {% for post in post_list %}
-        <div class="post-item">
-            <h2><a href="{% url 'posts:detail' pk=post.id %}">{{ post.title }}</a></h2>
-            <p>By {{ post.posted_by }}</p>
-            <p>{{ post.message }}</p>
-            <p>Created: {{ post.created }}</p>
-            <p>Modified: {{ post.modified }}</p>
+    <div class="container-fluid padding">
+    <div class="row featured text-center">
+        <div class="col-12">
+            <h1 class="display-4">Posts</h1>
         </div>
-    {% endfor %}
+    </div>
+    </div>
+
+    <div class="container-fluid padding">
+    <div class="row padding">
+        {% for post in post_list %}
+        <div class="col-sm-4 card-deck">
+            <div class="card post-item">
+                <div class="card-body">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                    <p class="card-text">by {{ post.posted_by }}</p>
+                    <p class="card-text">{{ post.message }}</p>
+                    <p class="card-text">{{ post.created }}</p>
+                    <a class="card-link" href="{% url 'posts:detail' pk=post.id %}">Read more</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     </div>
 {% endblock %}

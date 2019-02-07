@@ -7,7 +7,7 @@
 
     <title>{% block title %}Djogger{% endblock title %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!--<link href="{% static 'css/base.css' %}" rel="stylesheet">-->
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -21,7 +21,7 @@
                 <a class="nav-link" href="{% url 'posts:list' %}">List</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'posts:create' %}">Add Post</a>
+                <a class="nav-link" href="{% url 'posts:create' %}">New Post</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">

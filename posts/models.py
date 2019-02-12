@@ -20,7 +20,7 @@ class Post(Postable):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('posts-detail', args=[str(self.id)])
+        return reverse('posts:detail', args=[str(self.id)])
 
 
 class Comment(Postable):
@@ -31,4 +31,4 @@ class Comment(Postable):
         return self.message
 
     def get_absolute_url(self):
-        return reverse('posts-detail', args=[str(self.post.id)])
+        return reverse('posts:detail', args=[str(self.post.id)])

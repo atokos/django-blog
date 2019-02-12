@@ -10,6 +10,7 @@ django = "==2.1.5"
 gunicorn = "==19.5.0"
 dj-database-url = "*"
 psycopg2 = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.6"

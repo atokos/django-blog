@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container-fluid padding">
+    <div class="container-fluid padding-bottom padding-top">
     <div class="row featured text-center">
         <div class="col-12">
             <h1 class="display-4">Posts</h1>
+            <hr class="center">
         </div>
     </div>
     </div>
@@ -12,8 +13,8 @@
     <div class="container-fluid padding">
     <div class="row padding">
         {% for post in post_list %}
-        <div class="col-sm-4 card-deck">
-            <div class="card post-item">
+        <div class="col-sm-12 col-md-6 col-lg-4 card-deck">
+            <div class="card">
                 <div class="card-body">
                     <h3 class="card-title">{{ post.title }}</h3>
                     <p class="card-text">by {{ post.posted_by }}</p>

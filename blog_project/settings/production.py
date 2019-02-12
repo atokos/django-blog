@@ -25,7 +25,7 @@ SECRET_KEY = 'u5xje$xw-$f1-qo-=ar_m&3@cc&)wv#-^+abz__+*(3oh2=0qz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['djogger.herokuapp.com']
 
 
 # Application definition
